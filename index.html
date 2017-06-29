@@ -4,30 +4,120 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<style type="text/css">
+			body
+			{
+				margin: 0px;
+			}
+			canvas
+			{
+				 position: absolute;
+				 left: 0px;
+				 right: 0px;
+				 /*background-color: transparent  */
+			}
+			#div1
+			{
+				width: 800px;
+				height: 600px;
+				position: relative;
+			}
+			#div2
+			{
+				width: 800px;
+				height: 36px;
+				border: 1px solid black;
+				background-color:rgb(220,230,244) ;
+			}
 			ul
 			{
-				background-color: rgb(236,233,216);
-				width: 800px;
+				background-color: rgb(220,230,244);
+				text-align: center;
 				margin: 0;
 				padding: 0;
+				height: 30px;
+				float: left;
+				margin-left: 14px;
+				margin-right: 14px;
 			}
 			ul>li
 			{
+				float: left;
+				border: 1px solid gainsboro;
+				width: 40px;
+				line-height: 25px;			
 				display: inline-block;
+				height: inherit;
 			}
+			button
+			{
+				padding: 0px;
+				
+			}
+			.red
+			{
+				background-color: red;
+			}
+			.black
+			{
+				background-color: black;
+			}
+			.white
+			{
+				background-color: white;
+			}
+			.blue
+			{
+				background-color: blue;
+			}
+			.yellow
+			{
+				background-color: yellow;
+			}
+			.choice
+			{
+				border: 3px solid gold;
+			}
+			
 		</style>
 		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common2.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
-		<canvas id="c" width="800px" height="600px"></canvas>
-		<ul>
-			<li id="juxing"><img src="img/juxing.png"/></li>
-			<li><img src="img/yuanxing.png"/></li>
-			<li>1</li>
-			<li>1</li>
-			<li>1</li>
-		</ul>
+		
+		<div id="div1">
+			<canvas id="c" width="800px" height="600px" style=""></canvas>
+			<canvas id="c2" width="800px" height="600px"  ></canvas>
+		</div>
+		<div id="div2" >
+			
+			<ul>
+				<li style="font-size: 13px;">工具：</li>
+				<li id="qianbi" class="choice"><img src="img/qianbi.png"/></li>
+				<li id="juxing"><img src="img/juxing.png"/></li>
+				<li id="yuanxing"><img src="img/yuanxing.png"/></li>
+				<li id="xiangpi"><img src="img/xiangpi.png"/></li>
+			</ul>
+			<ul>
+				<li style="font-size: 13px;">颜色：</li>
+				<li class="black choice"></li>
+				<li class="white" ></li>
+				<li class="red"></li>
+				<li class="yellow"></li>
+				<li class="blue"></li>
+			</ul>
+			<ul>
+				<li style="font-size: 13px;">粗细：</li>
+				<li class="small" >细</li>
+				<li class="normol choice" >正常</li>
+				<li class="big">粗</li>
+			</ul>
+			<ul>
+				<!--<li class="savedraw" ><button>保存</button></li>-->
+				<li class="cleardraw" ><button>清空</button></li>
+			</ul>
+		</div>
+		
+		
 		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			var c = document.getElementById("c");
