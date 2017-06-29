@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			ul
+			{
+				background-color: rgb(236,233,216);
+				width: 800px;
+				margin: 0;
+				padding: 0;
+			}
+			ul>li
+			{
+				display: inline-block;
+			}
+		</style>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<canvas id="c" width="800px" height="600px"></canvas>
+		<ul>
+			<li id="juxing"><img src="img/juxing.png"/></li>
+			<li><img src="img/yuanxing.png"/></li>
+			<li>1</li>
+			<li>1</li>
+			<li>1</li>
+		</ul>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var c = document.getElementById("c");
+			var ctx = c.getContext('2d');
+			ctx.beginPath();
+			ctx.rect(0,0,800,600);
+			ctx.stroke();
+			
+		</script>
+		
+			
+
+         
+          
+         
+         
+
+        
+		
+	</body>
+</html>
