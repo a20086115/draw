@@ -9,15 +9,19 @@ $(function(){
 	var ctx = c.getContext('2d');
 	var c2 = document.getElementById("c2");
 	var ctx2 = c2.getContext('2d');
-	ctx.beginPath();
-	ctx.rect(0,0,800,600);
-	ctx.stroke();
 
 	//添加选中样式
 	$("li").click(function(){
 		$(".cleardraw").removeClass("choice");
-		$(this).parent().children().removeClass("choice");
-		$(this).addClass("choice");
+		//如果点的是那几个小标题是没有反应的
+		if ($(this).prop("className") == "firstli") {
+			
+		} else{
+		//先把父元素下的其他元素的选中状态移除。
+			$(this).parent().children().removeClass("choice");
+			$(this).addClass("choice");
+		}
+		
 	})
 	$(".small").click(function(){
 		mywidth = 1;
@@ -57,11 +61,6 @@ $(function(){
 	})
 	$(".cleardraw").click(function(){
 		ctx.clearRect(0,0,800,600);
-		ctx.beginPath();
-		ctx.rect(0,0,800,600);
-		ctx.strokeStyle = "black"
-		ctx.lineWidth = "1"
-		ctx.stroke();
 	})
 	
 	$("#div1").mousedown(function(event){
@@ -78,9 +77,7 @@ $(function(){
 				$("#div1").mousemove(function(event){
 					if(lock0)
 					{			
-	//					console.log("鼠标移动的时候",event.pageX + ", " + event.pageY);
 						ctx.beginPath();
-	//					console.log("鼠标移动的时候beginx和beginy",beginx,beginy);
 						ctx.moveTo(beginx,beginy);
 						ctx.lineTo(event.pageX,event.pageY);
 						ctx.strokeStyle = mycolor;
@@ -111,15 +108,12 @@ $(function(){
 			case 2:
 				lock2=true;
 				console.log("画个圆吧 ！")
-//				console.log("我画圆的时候：",beginx,beginy);
 				$("#div1").mousemove(function(event){			
 					if(lock2)
 					{
 						ctx2.clearRect(0,0,800,600); 					
-						console.log("鼠标移动的时候beginx和beginy",beginx,beginy);
 						xx=event.pageX-beginx;
 						yy=event.pageY-beginy;
-						console.log(event.pageX,event.pageY);
 						r = Math.sqrt(xx*xx+yy*yy)/2;
 						centerx = (event.pageX+beginx)/2;
 						centery = (event.pageY+beginy)/2;
@@ -136,14 +130,11 @@ $(function(){
 			case 3:
 				console.log("我选的是橡皮");
 				lock3 = true;
-				//console.log("我点下来的时候：",beginx,beginy);
 				$("#div1").mousemove(function(event){
 					if(lock3)
 					{
 					
-	//					console.log("鼠标移动的时候",event.pageX + ", " + event.pageY);
 						ctx.beginPath();
-	//					console.log("鼠标移动的时候beginx和beginy",beginx,beginy);
 						ctx.moveTo(beginx,beginy);
 						ctx.lineTo(event.pageX,event.pageY);
 						ctx.strokeStyle = "white";

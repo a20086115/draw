@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common2.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
 			body
 			{
@@ -13,13 +15,13 @@
 				 position: absolute;
 				 left: 0px;
 				 right: 0px;
-				 /*background-color: transparent  */
 			}
 			#div1
 			{
 				width: 800px;
 				height: 600px;
 				position: relative;
+				border: 1px solid black;
 			}
 			#div2
 			{
@@ -91,14 +93,14 @@
 		<div id="div2" >
 			
 			<ul>
-				<li style="font-size: 13px;">工具：</li>
+				<li class="firstli" style="font-size: 13px;">工具：</li>
 				<li id="qianbi" class="choice"><img src="img/qianbi.png"/></li>
 				<li id="juxing"><img src="img/juxing.png"/></li>
 				<li id="yuanxing"><img src="img/yuanxing.png"/></li>
 				<li id="xiangpi"><img src="img/xiangpi.png"/></li>
 			</ul>
 			<ul>
-				<li style="font-size: 13px;">颜色：</li>
+				<li class="firstli" style="font-size: 13px;">颜色：</li>
 				<li class="black choice"></li>
 				<li class="white" ></li>
 				<li class="red"></li>
@@ -106,7 +108,7 @@
 				<li class="blue"></li>
 			</ul>
 			<ul>
-				<li style="font-size: 13px;">粗细：</li>
+				<li class="firstli" style="font-size: 13px;">粗细：</li>
 				<li class="small" >细</li>
 				<li class="normol choice" >正常</li>
 				<li class="big">粗</li>
@@ -116,26 +118,6 @@
 				<li class="cleardraw" ><button>清空</button></li>
 			</ul>
 		</div>
-		
-		
-		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			var c = document.getElementById("c");
-			var ctx = c.getContext('2d');
-			ctx.beginPath();
-			ctx.rect(0,0,800,600);
-			ctx.stroke();
-			
-		</script>
-		
-			
-
-         
-          
-         
-         
-
-        
 		
 	</body>
 </html>
