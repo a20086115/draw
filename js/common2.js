@@ -74,7 +74,7 @@ $(function(){
 				console.log("我选的是铅笔");
 				lock0 = true;
 				//console.log("我点下来的时候：",beginx,beginy);
-				$("#div1").mousemove(function(event){
+				$("#div1").bind('mousemove',function(event){
 					if(lock0)
 					{			
 						ctx.beginPath();
@@ -188,11 +188,11 @@ $(function(){
 				break;
 				
 		}
-		
-		lock0=false;
-		lock1=false;
-		lock2=false;
-		lock3=false;
+		$("#div1").unbind("mousemove");
+//		lock0=false;
+//		lock1=false;
+//		lock2=false;
+//		lock3=false;
 	});
 })
 
