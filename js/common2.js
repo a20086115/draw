@@ -91,7 +91,7 @@ $(function(){
 			case 1:
 				lock1 = true;
 				console.log("画个矩形吧！");
-				$("#div1").mousemove(function(event){			
+				$("#div1").bind('mousemove',function(event){		
 					if(lock1)
 					{
 						ctx2.clearRect(0,0,800,600); 
@@ -108,7 +108,7 @@ $(function(){
 			case 2:
 				lock2=true;
 				console.log("画个圆吧 ！")
-				$("#div1").mousemove(function(event){			
+				$("#div1").bind('mousemove',function(event){		
 					if(lock2)
 					{
 						ctx2.clearRect(0,0,800,600); 					
@@ -130,7 +130,7 @@ $(function(){
 			case 3:
 				console.log("我选的是橡皮");
 				lock3 = true;
-				$("#div1").mousemove(function(event){
+				$("#div1").bind('mousemove',function(event){
 					if(lock3)
 					{
 					
