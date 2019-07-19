@@ -1,8 +1,8 @@
  
+[点我试玩](https://a20086115.github.io/draw/)
 
 写在前面
 ----
-	试看链接：[https://a20086115.github.io/draw/](https://a20086115.github.io/draw/)
 	希望您能点个star 点个关注  点个收藏！
 	有问题请issue！
 代码实现
